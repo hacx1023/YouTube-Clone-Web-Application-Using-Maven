@@ -1,16 +1,22 @@
 pipeline:
+  description: Build the Spring Boot application with Maven
+  tags:
+    ai_generated: ""
+  clone:
+    enabled: true
+    connector: connector_Github_5248
+    repo: hacx1023/YouTube-Clone-Web-Application-Using-Maven
+    ref:
+      type: branch
+      name: main
   stages:
     - steps:
         - run:
-            script: "mvn clean\r
-
-              mvn validate\r
-
-              mvn compile\r
-
-              mvn test\r
-
-              mvn package"
-            shell: sh
+            script: |
+              mvn clean
+              mvn validate
+              mvn compile
+              mvn test
+              mvn package
           name: Build
           id: Build
