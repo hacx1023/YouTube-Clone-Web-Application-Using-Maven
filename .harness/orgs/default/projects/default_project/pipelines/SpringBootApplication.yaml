@@ -12,11 +12,14 @@ pipeline:
   stages:
     - steps:
         - run:
-            script: |
-              mvn clean
-              mvn validate
-              mvn compile
-              mvn test
-              mvn package
+            script: "mvn clean\r
+
+              mvn validate\r
+
+              mvn compile\r
+
+              mvn test\r
+
+              mvn package"
           name: Build
           id: Build
