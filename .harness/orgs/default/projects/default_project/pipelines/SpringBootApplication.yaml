@@ -25,6 +25,6 @@ pipeline:
             uses: buildAndPushToDocker
             with:
               connector: connector_DockerRegistry_cc6d
-              repo: 10shubhamdhiman/YouTube-Clone-Web-Application-Using-Maven
+              repo: 10shubhamdhiman/youtube-clone-web-application-using-maven
               tags:
                 - 1.0.0
