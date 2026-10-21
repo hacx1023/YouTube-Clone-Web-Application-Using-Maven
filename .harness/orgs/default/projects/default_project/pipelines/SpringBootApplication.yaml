@@ -1,0 +1,16 @@
+pipeline:
+  stages:
+    - steps:
+        - run:
+            script: "mvn clean\r
+
+              mvn validate\r
+
+              mvn compile\r
+
+              mvn test\r
+
+              mvn package"
+            shell: sh
+          name: Build
+          id: Build
