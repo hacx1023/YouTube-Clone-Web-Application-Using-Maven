@@ -1,5 +1,5 @@
 pipeline:
-  description: Build the Spring Boot application with Maven
+  description: Build the Spring Boot application with Maven and push a Docker image
   tags:
     ai_generated: ""
   clone:
@@ -19,3 +19,12 @@ pipeline:
             script: |
               mvn clean
               mvn package
+        - id: build_and_push_image
+          name: Build and Push Image
+          build:
+            uses: buildAndPushToDocker
+            with:
+              connector: connector_DockerRegistry_cc6d
+              repo: 10shubhamdhiman/YouTube-Clone-Web-Application-Using-Maven
+              tags:
+                - 1.0.0
